@@ -2,9 +2,9 @@ from scipy.io import wavfile
 import numpy as np
 from skimage.restoration import denoise_wavelet
 import matplotlib.pyplot as plt
+#OJO: instalar pip install PyWavelets
 
-
-Fs, x = wavfile.read('flutecut.wav')
+Fs, x = wavfile.read('audio/flutecut.wav')
 
 
 one_channel = x[:,0]
@@ -13,7 +13,7 @@ one_channel = one_channel/np.max(one_channel)
 sigma = 0.05
 data_noisy = one_channel +  sigma*np.random.randn(one_channel.size)
 
-wavfile.write('flute_noisy.wav',Fs, data_noisy)
+wavfile.write('audio/flute_noisy.wav',Fs, data_noisy)
 data_denoise =  denoise_wavelet(data_noisy, 
                              method='VisuShrink', 
                              mode = 'soft',
@@ -21,7 +21,7 @@ data_denoise =  denoise_wavelet(data_noisy,
                              wavelet_levels=6, 
                              rescale_sigma='True')
 
-wavfile.write('flute_denoisy.wav',Fs, data_denoise)
+wavfile.write('audio/flute_denoisy.wav',Fs, data_denoise)
 
 
 plt.figure()

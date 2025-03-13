@@ -3,7 +3,7 @@ import numpy as np
 import numpy.matlib
 import matplotlib.pyplot as plt
 
-img = cv2.imread('cameraman.png')
+img = cv2.imread('imagenes/cameraman.png')
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 gray = cv2.normalize(gray.astype('float'), None, 0.0, 1.0, cv2.NORM_MINMAX)
 

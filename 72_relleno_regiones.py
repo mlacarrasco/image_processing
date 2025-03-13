@@ -16,7 +16,7 @@ kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(5,5))
 #creacion imagen
 m,n = AC.shape
 M = np.zeros([m,n], dtype=np.uint8)
-BIN= np.zeros([m,n], dtype=np.uint8)
+BIN = np.zeros([m,n], dtype=np.uint8)
 
 #inicializacion
 ind = np.where(AC==255)         #buscamos un valor donde img sea blanco

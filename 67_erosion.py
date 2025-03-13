@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('../fotos/j.png')
+img = cv2.imread('imagenes/j.png')
 
 # MORPH_CROSS, MORPH_ELLIPSE, MORPH_RECT
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(15,15))

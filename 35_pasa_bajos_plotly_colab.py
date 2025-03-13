@@ -11,6 +11,7 @@ import numpy as np
 import plotly.express as px
 import plotly
 
+
 plotly.io.renderers.default = 'colab'
 from plotly import graph_objs as go
 
@@ -24,7 +25,7 @@ H = np.exp(-0.0005*(np.power(X,2)+np.power(Y,2)))
 # dejamos los datos en una sola dimension
 x = X.flatten()
 y = Y.flatten()
-z= H.flatten()
+z = H.flatten()
 
 
 mesh = go.Mesh3d(x=x, y=y, z=z, color='lightpink',opacity=0.50)

@@ -14,7 +14,7 @@ def umbral_global(A, level, iter):
 
 
 
-img =  cv2.imread('huella.png')
+img =  cv2.imread('imagenes/huella.png')
 cv2.imshow('huella', img)
 
 gris = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

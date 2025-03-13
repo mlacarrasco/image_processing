@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #lectura de la imagen
-img=  cv2.imread('galaxia.jpg', cv2.IMREAD_GRAYSCALE)
+img=  cv2.imread('imagenes/globos.jpg', cv2.IMREAD_GRAYSCALE)
 
 #dimensiones
 n,m = img.shape

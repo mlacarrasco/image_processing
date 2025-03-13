@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 #lectura de la imagen
-I = cv2.imread('rice.png', cv2.IMREAD_GRAYSCALE)
+I = cv2.imread('imagenes/rice.png', cv2.IMREAD_GRAYSCALE)
 
 #filtro lineal: promedio
 J = cv2.blur(I,(5,5))

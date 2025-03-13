@@ -3,7 +3,7 @@ from skimage import filters
 import matplotlib.pyplot as plt
 
 #lectura de la imagen
-img = cv2.imread('circuit.png')
+img = cv2.imread('imagenes/circuit.png')
 
 #transformación a escala de grises
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)

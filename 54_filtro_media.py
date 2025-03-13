@@ -8,7 +8,7 @@ def filtro_media(A):
     return S
 
 
-img = cv2.imread('cameraman.png')
+img = cv2.imread('imagenes/cameraman.png')
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 #Ruido impulsional

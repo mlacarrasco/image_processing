@@ -20,28 +20,28 @@ def puntos_aleatorios(L, N, delta):
     return bw
 
 
+if __name__=='__main__':
+    A = puntos_aleatorios(400, 80,10).astype('uint8')
 
-A = puntos_aleatorios(400, 80,10).astype('uint8')
+    N=7
+    X = cv2.getStructuringElement(cv2.MORPH_RECT,(N-2,N-2))
+    Z = cv2.getStructuringElement(cv2.MORPH_RECT,(N,N))
+    Z[1:N-1, 1:N-1]=0
 
-N=7
-X = cv2.getStructuringElement(cv2.MORPH_RECT,(N-2,N-2))
-Z = cv2.getStructuringElement(cv2.MORPH_RECT,(N,N))
-Z[1:N-1, 1:N-1]=0
+    print(Z)
+    
+    #Erosion
+    bw1 = cv2.erode(A,X)
+    bw2 = cv2.erode(cv2.bitwise_not(A),Z)
 
-print(Z)
- 
-#Erosion
-bw1 = cv2.erode(A,X)
-bw2 = cv2.erode(cv2.bitwise_not(A),Z)
+    cv2.imshow('bw1',cv2.bitwise_not(A))
+    cv2.imshow('bw2',bw2)
+    #Resultado 
+    HM =cv2.bitwise_and(bw1, bw2)
 
-cv2.imshow('bw1',cv2.bitwise_not(A))
-cv2.imshow('bw2',bw2)
-#Resultado 
-HM =cv2.bitwise_and(bw1, bw2)
+    cv2.imshow('Original',A)
+    cv2.waitKey(0)
 
-cv2.imshow('Original',A)
-cv2.waitKey(0)
-
-cv2.imshow('Hit Miss',HM)
-cv2.waitKey(0)
+    cv2.imshow('Hit Miss',HM)
+    cv2.waitKey(0)
 

@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('cameraman.png')
+img = cv2.imread('imagenes/cameraman.png')
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 F = np.fft.fft2(gray)

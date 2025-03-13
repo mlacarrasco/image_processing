@@ -37,15 +37,17 @@ def otsu(img):
     level=np.argmin(vartotal[1:255])
     return level
 
-img = cv2.imread('imagenes/huella.png', cv2.IMREAD_GRAYSCALE)
-level= otsu(img)
-print(f'el nivel es:{level}')
 
-ret, bin = cv2.threshold(img, level, 255,type=cv2.THRESH_BINARY)
-bw = (img > level)*1
+if __name__=='__main__':
+    img = cv2.imread('imagenes/huella.png', cv2.IMREAD_GRAYSCALE)
+    level= otsu(img)
+    print(f'el nivel es:{level}')
 
-fig, ax= plt.subplots(nrows=1, ncols=2)
-ax[0].imshow(bin, cmap='gray')
-ax[1].imshow(bw, cmap='gray')
-plt.show()
+    ret, bin = cv2.threshold(img, level, 255,type=cv2.THRESH_BINARY)
+    bw = (img > level)*1
+
+    fig, ax= plt.subplots(nrows=1, ncols=2)
+    ax[0].imshow(bin, cmap='gray')
+    ax[1].imshow(bw, cmap='gray')
+    plt.show()
 
