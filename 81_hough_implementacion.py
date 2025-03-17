@@ -1,8 +1,8 @@
 """
- Universidad Adolfo Ibañez
+ Universidad Diego Portales
  Facultad de Ingeniería y Ciencias
  Procesamiento Digital de Imágenes
- Miguel Carrasco (miguel.carrasco@uai.cl)
+ Miguel Carrasco (miguel.carrasco@mail.udp.cl)
 
  Ejemplo: proceso de acumulador de transformada de Hough
  %rev.$1.0.$ date: 10/06/2024
