@@ -1,3 +1,12 @@
+"""
+ Universidad Diego Portales
+ Facultad de Ingeniería y Ciencias
+ Procesamiento Digital de Imágenes
+ Miguel Carrasco (miguel.carrasco@mail.udp.cl)
+
+ Ejemplo: proceso de acumulador de transformada de Hough
+ %rev.$1.1.$ date: 17/03/2025
+"""
 import cv2
 import codecs, json
 import pandas as pd

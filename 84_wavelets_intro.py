@@ -1,11 +1,12 @@
 """
- Universidad Adolfo Ibañez
+ Universidad Diego Portales
  Facultad de Ingeniería y Ciencias
  Procesamiento Digital de Imágenes
- Miguel Carrasco (miguel.carrasco@uai.cl)
+ Miguel Carrasco (miguel.carrasco@mail.udp.cl)
 
 %rev.$1.2.$ date: 09/05/2020
 %rev.$1.2.$ date: 26/05/2021
+%rev.$1.3.$ date: 17/03/2025
 """
 
 import  sys
@@ -150,6 +151,4 @@ plt.subplot(122)
 plt.imshow(grp, cmap= cm.gray)
 plt.axis('off')
 plt.title('Agrupación en  niveles')
-
-
 plt.show()

@@ -1,3 +1,11 @@
+"""
+ Universidad Diego Portales
+ Facultad de Ingeniería y Ciencias
+ Procesamiento Digital de Imágenes
+ Miguel Carrasco (miguel.carrasco@mail.udp.cl)
+
+%rev.$1.0.$ date: 17/03/2021
+"""
 import cv2
 import numpy as np 
 import matplotlib.pyplot as plt 
