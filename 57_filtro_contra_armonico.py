@@ -13,11 +13,12 @@ gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 #Ruido impulsional
 mat_noise=np.random.random(gray.shape); #creates a uniform random variable from 0 to 1 
-sp_noise_black= np.uint8(np.where(mat_noise>=0.2,  1,0))
+sp_noise_black= np.uint8(np.where(mat_noise>=0.5,  1,0))
 noise_img = cv2.multiply(gray,sp_noise_black)
 
 #aplicamos el filtro promedio alfa-acotado
-filtro= ndi.generic_filter(noise_img,filtro_contra_armonico, [3,3], extra_keywords={'Q':20})
+filtro= ndi.generic_filter(noise_img,filtro_contra_armonico, [3,3], extra_keywords={'Q':0.2})
+
 
 plt.figure()
 plt.imshow(noise_img, cmap="gray")
