@@ -92,6 +92,8 @@ od = 3 #orden del filtro
 fc = 4 #frecuencia de corte (ancho)
 x  = coords[:,1]/2
 y  = coords[:,0]/2
+print(f'coordenadas x: {x}')
+print(f'coordenadas y: {y}')
 
 # Funcion que genera puntos artificiales
 # segun las coordenadas seleccionadas
