@@ -61,7 +61,7 @@ if __name__=='__main__':
 
     # PASO 2)
     # Parametros de Butterworth
-    od = 2 #orden del filtro
+    od = 3 #orden del filtro
     fc = 7 #frecuencia de corte (ancho)
 
     # Funcion que genera puntos artificiales
@@ -70,6 +70,10 @@ if __name__=='__main__':
     y  = np.array([271,320,341,369,321,299])/2
     HB = btw_pts(x,y,m,n,od,fc)
 
+    plt.figure()
+    plt.imshow(HB)
+    plt.show()
+    
     # Aplicamos el filtro sobre la imagen
     ef= FS*HB
 

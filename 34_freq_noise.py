@@ -17,6 +17,11 @@ noise_img= np.add(M, gray)
 F = np.fft.fft2(noise_img)
 fshift = np.fft.fftshift(F)
 
+#este proceso solo lo realizamos para visualizar el espectro
+plt.figure()
+plt.imshow(np.log(np.abs(fshift)+1), cmap='gray')
+plt.show()
+
 #bloqueamos las frecuencias con ruido
 fshift[122:130,118:120]=0.0
 fshift[122:130,138:140]=0.0
