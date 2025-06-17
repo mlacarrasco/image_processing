@@ -7,6 +7,7 @@
  Ejemplo: proceso de acumulador de transformada de Hough
  %rev.$1.0.$ date: 10/06/2024
  %rev.$1.1.$ date: 13/06/2024
+ %rev.$1.2.$ date: 13/06/2025
 """
 
 import cv2
@@ -40,11 +41,13 @@ def mapa_acumulacion(bordes,min_distance,threshold):
     # rho = x * np.cos(theta) + y * np.sin(theta) 
     rho = lambda theta : x * np.cos(theta) + y * np.sin(theta)
 
-    #aplicamos la función map para iterar sobre el arreglo theta
+    # aplicamos la función map para iterar sobre el arreglo theta
     # esto nos permite obtener una matriz con distancias 
     # (cada fila un angulo y cada columna una cada coordenada [x,y] del borde)
+    # note que "rho" es una función anónima y map aplica la función por cada valor de theta
+    # obtenemos como resultado una matriz con 360 angulos y en cada ángulo la distancia al punto (x,y)
     mapa_de_distancias = map(rho, theta) 
-
+    
     # la funcion min_row retorna el índice (o distancia) entre un valor
     # y la distancia definida en rho_distancia
     min_row = lambda val: np.argmin(np.abs(val-rho_distancia))
